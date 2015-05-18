@@ -12,9 +12,9 @@ RUN apt-get update -y \
         python2.7 \
         libssl-dev \
  && apt-get clean \
- && curl -L -C - --progress-bar "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
- && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
- && rm "node-v$NODE_VERSION-linux-x64.tar.gz" \
+ && wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz \
+ && tar -xzf node-v$NODE_VERSION-linux-x64.tar.gz -C /usr/local --strip-components=1 \
+ && rm node-v$NODE_VERSION-linux-x64.tar.gz \
  && npm install -g npm \
  && npm cache clear
     
