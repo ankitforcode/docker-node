@@ -8,6 +8,7 @@ ENV NODE_VERSION 0.10.38
 RUN apt-get update -y \
  && apt-get install -y \
         curl \
+        wget \
         build-essential \
         python2.7 \
         libssl-dev \
