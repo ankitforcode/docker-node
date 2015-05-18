@@ -3,7 +3,7 @@
 # Dockerfile for Node.js v 0.10.x
 #
 ##
-FROM sunnybhanot:ubuntu
+FROM sunnybhanot/ubuntu
 
 # Versions
 ENV NODE_VERSION 0.10.38
