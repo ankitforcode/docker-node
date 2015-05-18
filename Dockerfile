@@ -11,7 +11,6 @@ RUN apt-get update -y \
         build-essential \
         python2.7 \
         libssl-dev \
-        && \
  && apt-get clean \
  && curl -L -C - --progress-bar "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
  && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
