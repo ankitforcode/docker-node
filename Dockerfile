@@ -1,16 +1,16 @@
-FROM ubuntu:trusty
+##
+#
+# Dockerfile for Node.js v 0.10.x
+#
+##
+FROM sunnybhanot:ubuntu
 
 # Versions
 ENV NODE_VERSION 0.10.38
 
-# Install Binary of Node JS
-# And Update NPM to latest version
+# Install
 RUN apt-get update -y \
  && apt-get install -y \
-        curl \
-        wget \
-        build-essential \
-        python2.7 \
         libssl-dev \
  && apt-get clean \
  && wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz \
@@ -19,4 +19,11 @@ RUN apt-get update -y \
  && npm install -g npm \
  && npm cache clear
     
+# Set Enviroment Variable
+ENV HOME /root
+
+# Working directory
+WORKDIR /root
+
+# Default Command
 CMD ["bash"]
