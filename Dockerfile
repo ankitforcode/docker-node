@@ -6,7 +6,7 @@
 FROM sunnybhanot/ubuntu
 
 # Versions
-ENV NODE_VERSION 0.10.38
+ENV NODE_VERSION 0.10.40
 
 # Install
 RUN apt-get update -y \
